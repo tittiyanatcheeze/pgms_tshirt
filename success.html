@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>สั่งซื้อสำเร็จ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 flex items-center justify-center min-h-screen">
+<div class="bg-white p-6 rounded-xl text-center shadow">
+  <h1 class="text-xl font-bold text-green-600">จองสำเร็จ</h1>
+  <p class="mt-2">Order ID</p>
+  <p id="order" class="font-mono mt-1"></p>
+  <p class="mt-4 text-sm">
+    กรุณาโอนเงินภายใน 5 นาที
+  </p>
+</div>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  document.getElementById('order').innerText =
+    params.get('order');
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>สั่งซื้อเสื้อ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100">
+<div class="max-w-xl mx-auto bg-white p-6 mt-6 rounded-xl shadow">
+
+  <h1 class="text-xl font-bold text-center">เสื้อแมวเท่ากัน</h1>
+  <p class="text-center text-sm text-gray-500 mb-4">
+    จำกัดไม่เกิน 4 ตัว / ออเดอร์
+  </p>
+
+  <!-- ชื่อ -->
+  <input id="fname" class="w-full border p-2 mb-2 rounded" placeholder="ชื่อ">
+  <input id="lname" class="w-full border p-2 mb-2 rounded" placeholder="นามสกุล">
+  <input id="phone" class="w-full border p-2 mb-2 rounded" placeholder="เบอร์โทร">
+
+  <!-- ที่อยู่ -->
+  <textarea id="address" class="w-full border p-2 mb-2 rounded"
+    placeholder="ที่อยู่จัดส่ง"></textarea>
+  <input id="province" class="w-full border p-2 mb-2 rounded" placeholder="จังหวัด">
+  <input id="postcode" class="w-full border p-2 mb-4 rounded" placeholder="รหัสไปรษณีย์">
+
+  <!-- สินค้า -->
+  <select id="color" class="w-full border p-2 mb-2 rounded">
+    <option value="">เลือกสี</option>
+    <option value="black">ดำ</option>
+    <option value="cream">ครีม</option>
+  </select>
+
+  <select id="size" class="w-full border p-2 mb-2 rounded">
+    <option value="">เลือกไซส์</option>
+    <option>S</option><option>M</option>
+    <option>L</option><option>XL</option>
+  </select>
+
+  <input id="qty" type="number" min="1" max="4"
+    value="1" class="w-full border p-2 mb-4 rounded">
+
+  <!-- สรุป -->
+  <div class="bg-gray-50 p-3 rounded mb-4 text-sm">
+    <div>ราคาสินค้า: <span id="subtotal">380</span> บาท</div>
+    <div>ค่าส่ง: 50 บาท</div>
+    <div class="font-bold">
+      รวม: <span id="total">430</span> บาท
+    </div>
+  </div>
+
+  <button id="buyBtn"
+    class="w-full bg-indigo-600 text-white py-3 rounded-lg">
+    สั่งซื้อ
+  </button>
+
+  <div id="msg" class="text-center mt-3 text-sm"></div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
