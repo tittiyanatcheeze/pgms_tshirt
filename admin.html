@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Orders</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 p-6">
+<h1 class="text-xl font-bold mb-4">📦 Orders</h1>
+
+<button id="exportBtn"
+  class="mb-4 bg-blue-600 text-white px-4 py-2 rounded">
+  Export CSV
+</button>
+
+<table class="w-full bg-white rounded shadow text-sm">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="p-2">Order</th>
+      <th class="p-2">Status</th>
+      <th class="p-2">Total</th>
+      <th class="p-2">Created</th>
+    </tr>
+  </thead>
+  <tbody id="rows"></tbody>
+</table>
+
+<script src="https://unpkg.com/@supabase/supabase-js"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
